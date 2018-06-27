@@ -1,39 +1,51 @@
-card_number = "4929735477250543"
+card_number = "4024007136512380"
 
 #Seperating the string into elements in an array
 cna = card_number.chars
 
 #Converting the strings to integers
-cna.map! do |num|
-  num.to_i
+cream = []
+cna.each do |num|
+  cream << num.to_i
 end
 
 #Removing the check number and assigning it to a variable
-check = cna.pop
+check = cream.pop
 
 #Multiplying every other number by 2 starting from right
-x = -1
-while x >= cna.length * (-1)
-  if x % 2 != 0
-    cna[x] = cna[x] * 2
-    x = x - 1
+feel = []
+cream.each.with_index do |elem, index|
+  if index % 2 == 0
+    feel << elem * 2
   else
-    x = x - 1
+    feel << elem
   end
 end
 
+#Old formula
+  # x = -1
+  # while x >= cna.length * (-1)
+  #   if x % 2 != 0
+  #     cna[x] = cna[x] * 2
+  #     x = x - 1
+  #   else
+  #     x = x - 1
+  #   end
+  # end
+
 #Summed digits over 10
-cna.map! do |num|
+spork = []
+feel.each do |num|
   if num >= 10
-    num = num - 9
+    spork << num - 9
   else
-    num = num
+    spork << num
   end
 end
 
 #Sum of all elements
 sum = 0
-cna.each do |num|
+spork.each do |num|
   sum = sum + num
 end
 
