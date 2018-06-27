@@ -1,4 +1,4 @@
-card_number = "4024007136512380"
+card_number = "4929735477250543"
 
 #Seperating the string into elements in an array
 cna = card_number.chars
