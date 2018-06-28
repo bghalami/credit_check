@@ -1,12 +1,18 @@
 class CreditCheck
-
+ attr_accessor :card_number
+ attr_accessor :array_as_int
+ attr_accessor :check
+ attr_accessor :double_array
+ attr_accessor :consolidate
+ attr_accessor :summed
+ attr_accessor :card_number_array
   def initialize(card_number)
     @card_number = card_number.to_s
     @array_as_int = []
     @check = 0
     @double_array = []
     @consolidate = []
-    @sum = 0
+    @summed = 0
     @card_number_array = []
   end
 
@@ -46,7 +52,7 @@ class CreditCheck
 
   def sum
     @consolidate.each do |num|
-      @sum += num
+      @summed += num
     end
   end
 
@@ -71,7 +77,7 @@ class CreditCheck
   end
 
   def valid_number?(card_number)
-    if (@check + @sum) % 10 == 0
+    if (@check + @summed) % 10 == 0
       p true
     else
       p false
@@ -86,6 +92,3 @@ class CreditCheck
     end
   end
 end
-
-credit_check = CreditCheck.new(5541808923795240)
-credit_check.activate
