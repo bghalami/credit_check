@@ -1,10 +1,7 @@
 class CreditCheck
 
-  def initialize
-    puts "Enter card number:"
-    card_number = gets
-    @card_number = card_number
-    card_number.to_i
+  def initialize(card_number)
+    @card_number = card_number.to_s
     @array_as_int = []
     @check = 0
     @double_array = []
@@ -83,9 +80,12 @@ class CreditCheck
 
   def validation_output(card_number)
     if valid_number?(@card_number) == true
-      puts "The number #{@card_number} is valid"
+      p "The number #{@card_number} is valid"
     else
-      puts "The number #{@card_number} is invalid"
+      p "The number #{@card_number} is invalid"
     end
   end
 end
+
+credit_check = CreditCheck.new
+credit_check.activate
