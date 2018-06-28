@@ -1,6 +1,7 @@
 class CreditCheck
-  def initialize
 
+  def initialize
+    
   end
 
   def valid_number?(account_number)
