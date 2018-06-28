@@ -87,5 +87,5 @@ class CreditCheck
   end
 end
 
-credit_check = CreditCheck.new
+credit_check = CreditCheck.new(5541808923795240)
 credit_check.activate
