@@ -12,5 +12,4 @@ class CreditCheckTest < Minitest::Test
     credit_check = CreditCheck.new(5541808923795240)
     assert_equal "The number 5541808923795240 is valid",credit_check.validation_output(5541808923795240)
   end
-
 end
