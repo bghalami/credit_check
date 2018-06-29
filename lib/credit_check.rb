@@ -1,12 +1,6 @@
 class CreditCheck
- attr_accessor :card_number
- attr_accessor :array_as_int
- attr_accessor :check
- attr_accessor :double_array
- attr_accessor :consolidate
- attr_accessor :summed
- attr_accessor :card_number_array
-  def initialize(card_number)
+ attr_accessor :card_number, :array_as_int, :check, :double_array, :consolidate, :summed, :card_number_array
+  def initialize
     @card_number = card_number.to_s
     @array_as_int = []
     @check = 0
